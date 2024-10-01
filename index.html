@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="idcard(event)">
+      <input type="text" id="i1" placeholder="Name" /><br><br>
+      <input type="text" id="i2" placeholder="Profession"/><br><br>
+      <input type="text" id="i3" placeholder="Date of Birth"/><br><br>
+      <input type="submit" />
+    </form>
+    <div id="md">
+      <img src="" id="img">
+      <p id="i11"></p>
+      <p id="i22"></p>
+      <p id="i33"></p>
+    </div>
+    <script>
+    let ip1 = document.getElementById("i1");
+       let ip11 = document.getElementById("i11");
+       let ip2 = document.getElementById("i2");
+       let ip22 = document.getElementById("i22");
+       let ip3 = document.getElementById("i3");
+       let ip33 = document.getElementById("i33");
+       ip1.style.margin="5px 150px"
+       ip1.style.fontSize="20px"
+       ip2.style.margin="5px 150px"
+       ip2.style.fontSize="20px"
+       ip3.style.margin="10px 150px"
+       ip3.style.fontSize="20px"
+       sub=document.getElementsByTagName("input")
+      sub[3].style.margin="10px 180px"
+      sub[3].style.fontSize="20px"
+           md1.appendChild(ip11)
+           md1.appendChild(ip22)
+           md1.appendChild(ip33)
+      
+
+
+      function idcard(event) {
+        event.preventDefault();
+        let md1 = document.getElementById("md");
+        md1.style.border = "2px solid black";
+        md1.style.height = "400px";
+        md1.style.width = "250px";
+        md1.style.margin = "100px 100px";
+        md1.style.borderRadius="30px"
+        md1.style.boxShadow="5px 5px lightgreen"
+        md1.style.backgroundColor="aqua"
+
+           img=document.getElementById("img")
+           md1.prepend(img);  
+          
+        img.setAttribute(
+          "src",
+          "https://www.sportsradiointerviews.com/wp-content/uploads/2020/02/Suresh-Raina-best-performances-in-T20s.jpg"
+        );
+        img.style.height = "150px";
+        img.style.width = "150px";
+        img.style.borderRadius = "100px";
+        img.style.margin = " 25px 50px";
+
+
+
+
+        ip11.style.margin="-10px 50px"
+        ip22.style.margin="50px"
+        ip33.style.margin="-10px 50px"
+
+       
+        ip11.innerHTML = "<strong>NAME:" + ip1.value;
+        ip22.innerHTML = "<strong>Profession:" + ip2.value;
+        ip33.innerHTML = "<strong>Date of Birth:" + ip3.value;
+          
+
+
+          
+      }
+      
+    </script>
+  </body>
+</html>
